@@ -143,20 +143,26 @@
     .carousel-logo {
       flex-shrink: 0;
       height: 40px;
+      min-width: 60px;
       width: auto;
       max-width: 120px;
       object-fit: contain;
-      filter: grayscale(100%);
-      opacity: 0.5;
+      filter: grayscale(100%) brightness(0.4);
+      opacity: 0.7;
       transition: all 0.3s ease;
     }
     .carousel-logo:hover {
-      filter: grayscale(0%);
+      filter: grayscale(0%) brightness(1);
       opacity: 1;
     }
     @keyframes carousel-scroll {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
+    }
+    @media (max-width: 640px) {
+      .trust-bar { padding: 24px 0; }
+      .carousel-track { gap: 32px; animation-duration: 30s; }
+      .carousel-logo { height: 32px; min-width: 50px; max-width: 100px; }
     }
 
     /* --- SECTION STYLES --- */
@@ -234,11 +240,14 @@
       text-align: center; padding: 32px 24px; background: var(--bg-soft);
       border-radius: var(--radius); border: 1px solid var(--border);
     }
-    .pillar-number {
-      display: inline-flex; width: 48px; height: 48px;
+    .pillar-icon {
+      display: inline-flex; width: 60px; height: 60px;
       align-items: center; justify-content: center;
-      background: var(--navy); color: var(--gold);
-      font-size: 20px; font-weight: 800; border-radius: 50%; margin-bottom: 16px;
+      background: var(--navy); border-radius: 16px; margin-bottom: 16px;
+    }
+    .pillar-icon svg {
+      width: 30px; height: 30px; stroke: var(--gold); fill: none;
+      stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;
     }
     .pillar h3 { font-size: 17px; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
     .pillar p { font-size: 14px; color: var(--text-light); line-height: 1.65; }
@@ -523,73 +532,73 @@
     <p class="trust-bar-label">FisioReferentes ha trabajado con</p>
     <div class="carousel-wrapper">
       <div class="carousel-track">
-        <img class="carousel-logo" src="LOGOS FISIOS/2024-03-09.png" alt="Clínica colaboradora" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/219776_155446761188933_3446800_o-845x684.jpg" alt="Clínica colaboradora" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/9cb04ff4e51a92df3ffccd444ec3ed35.png" alt="Clínica colaboradora" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/CARTEL 2 FER LOGO OK editado editado.png.webp" alt="Clínica colaboradora" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/Captura de pantalla 2024-04-17 a las 11.43.57.png" alt="Clínica colaboradora" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/Captura de pantalla 2024-04-17 a las 11.45.15.png" alt="Clínica colaboradora" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/Captura_de_pantalla_2023-11-02_a_las_11.48.04-removebg-preview.png" alt="Clínica colaboradora" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/FISIOTONIK-logo-@3x.png" alt="FisioTonik" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/Fisiolab-logo-blanco-verde.png" alt="Fisiolab" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/Fondo-Transparente_Logotipo_Horizontal--scaled.webp" alt="Clínica colaboradora" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/Logo-Web-final-texto.png" alt="Clínica colaboradora" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/Logo_KINESI-12.png.webp" alt="Kinesi" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/Marca-_-FISPO.png" alt="Fispo" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/Tarjeta-horizontal-768x243.png" alt="Clínica colaboradora" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/cropped-LOGOFISIOACTIVOclinics-scaled-1.webp" alt="FisioActivo Clinics" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/cropped-cropped-ime-montsia-salut-favicon.png" alt="IME Montsià Salut" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/fisiosentis.png" alt="FisioSentis" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/fisioterapia-aravaca-logo-azul_Mesa-de-trabajo-1-copia.png" alt="Fisioterapia Aravaca" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/fisioterapia-goya-madrid-logo.png" alt="Fisioterapia Goya Madrid" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/images.png" alt="Clínica colaboradora" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/kines_logo.png" alt="Kines" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/log3.png" alt="Clínica colaboradora" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/logo-activefisio-mallorcax2.png" alt="ActiveFisio Mallorca" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/logo-big.svg" alt="Clínica colaboradora" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/logo-clinica-fragma.png" alt="Clínica Fragma" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/logo-clinica-teknos.png" alt="Clínica Teknos" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/logo-tkh-1.png" alt="TKH" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/logo.png" alt="Clínica colaboradora" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/logo.svg" alt="Clínica colaboradora" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/logo_41.png" alt="Clínica colaboradora" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/logo_6813e54bebdad45923017289e9162353_2x.png" alt="Clínica colaboradora" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/logo_osteovng_1.png" alt="OsteoVNG" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/logob.png" alt="Clínica colaboradora" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/2024-03-09.png" alt="Clínica colaboradora" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/219776_155446761188933_3446800_o-845x684.jpg" alt="Clínica colaboradora" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/9cb04ff4e51a92df3ffccd444ec3ed35.png" alt="Clínica colaboradora" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/CARTEL%202%20FER%20LOGO%20OK%20editado%20editado.png.webp" alt="Clínica colaboradora" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/Captura%20de%20pantalla%202024-04-17%20a%20las%2011.43.57.png" alt="Clínica colaboradora" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/Captura%20de%20pantalla%202024-04-17%20a%20las%2011.45.15.png" alt="Clínica colaboradora" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/Captura_de_pantalla_2023-11-02_a_las_11.48.04-removebg-preview.png" alt="Clínica colaboradora" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/FISIOTONIK-logo-%403x.png" alt="FisioTonik" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/Fisiolab-logo-blanco-verde.png" alt="Fisiolab" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/Fondo-Transparente_Logotipo_Horizontal--scaled.webp" alt="Clínica colaboradora" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/Logo-Web-final-texto.png" alt="Clínica colaboradora" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/Logo_KINESI-12.png.webp" alt="Kinesi" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/Marca-_-FISPO.png" alt="Fispo" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/Tarjeta-horizontal-768x243.png" alt="Clínica colaboradora" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/cropped-LOGOFISIOACTIVOclinics-scaled-1.webp" alt="FisioActivo Clinics" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/cropped-cropped-ime-montsia-salut-favicon.png" alt="IME Montsià Salut" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/fisiosentis.png" alt="FisioSentis" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/fisioterapia-aravaca-logo-azul_Mesa-de-trabajo-1-copia.png" alt="Fisioterapia Aravaca" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/fisioterapia-goya-madrid-logo.png" alt="Fisioterapia Goya Madrid" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/images.png" alt="Clínica colaboradora" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/kines_logo.png" alt="Kines" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/log3.png" alt="Clínica colaboradora" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/logo-activefisio-mallorcax2.png" alt="ActiveFisio Mallorca" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/logo-big.svg" alt="Clínica colaboradora" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/logo-clinica-fragma.png" alt="Clínica Fragma" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/logo-clinica-teknos.png" alt="Clínica Teknos" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/logo-tkh-1.png" alt="TKH" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/logo.png" alt="Clínica colaboradora" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/logo.svg" alt="Clínica colaboradora" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/logo_41.png" alt="Clínica colaboradora" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/logo_6813e54bebdad45923017289e9162353_2x.png" alt="Clínica colaboradora" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/logo_osteovng_1.png" alt="OsteoVNG" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/logob.png" alt="Clínica colaboradora" loading="lazy">
         <!-- Duplicado para loop infinito seamless -->
-        <img class="carousel-logo" src="LOGOS FISIOS/2024-03-09.png" alt="Clínica colaboradora" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/219776_155446761188933_3446800_o-845x684.jpg" alt="Clínica colaboradora" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/9cb04ff4e51a92df3ffccd444ec3ed35.png" alt="Clínica colaboradora" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/CARTEL 2 FER LOGO OK editado editado.png.webp" alt="Clínica colaboradora" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/Captura de pantalla 2024-04-17 a las 11.43.57.png" alt="Clínica colaboradora" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/Captura de pantalla 2024-04-17 a las 11.45.15.png" alt="Clínica colaboradora" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/Captura_de_pantalla_2023-11-02_a_las_11.48.04-removebg-preview.png" alt="Clínica colaboradora" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/FISIOTONIK-logo-@3x.png" alt="FisioTonik" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/Fisiolab-logo-blanco-verde.png" alt="Fisiolab" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/Fondo-Transparente_Logotipo_Horizontal--scaled.webp" alt="Clínica colaboradora" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/Logo-Web-final-texto.png" alt="Clínica colaboradora" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/Logo_KINESI-12.png.webp" alt="Kinesi" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/Marca-_-FISPO.png" alt="Fispo" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/Tarjeta-horizontal-768x243.png" alt="Clínica colaboradora" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/cropped-LOGOFISIOACTIVOclinics-scaled-1.webp" alt="FisioActivo Clinics" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/cropped-cropped-ime-montsia-salut-favicon.png" alt="IME Montsià Salut" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/fisiosentis.png" alt="FisioSentis" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/fisioterapia-aravaca-logo-azul_Mesa-de-trabajo-1-copia.png" alt="Fisioterapia Aravaca" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/fisioterapia-goya-madrid-logo.png" alt="Fisioterapia Goya Madrid" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/images.png" alt="Clínica colaboradora" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/kines_logo.png" alt="Kines" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/log3.png" alt="Clínica colaboradora" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/logo-activefisio-mallorcax2.png" alt="ActiveFisio Mallorca" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/logo-big.svg" alt="Clínica colaboradora" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/logo-clinica-fragma.png" alt="Clínica Fragma" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/logo-clinica-teknos.png" alt="Clínica Teknos" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/logo-tkh-1.png" alt="TKH" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/logo.png" alt="Clínica colaboradora" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/logo.svg" alt="Clínica colaboradora" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/logo_41.png" alt="Clínica colaboradora" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/logo_6813e54bebdad45923017289e9162353_2x.png" alt="Clínica colaboradora" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/logo_osteovng_1.png" alt="OsteoVNG" loading="lazy">
-        <img class="carousel-logo" src="LOGOS FISIOS/logob.png" alt="Clínica colaboradora" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/2024-03-09.png" alt="Clínica colaboradora" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/219776_155446761188933_3446800_o-845x684.jpg" alt="Clínica colaboradora" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/9cb04ff4e51a92df3ffccd444ec3ed35.png" alt="Clínica colaboradora" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/CARTEL%202%20FER%20LOGO%20OK%20editado%20editado.png.webp" alt="Clínica colaboradora" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/Captura%20de%20pantalla%202024-04-17%20a%20las%2011.43.57.png" alt="Clínica colaboradora" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/Captura%20de%20pantalla%202024-04-17%20a%20las%2011.45.15.png" alt="Clínica colaboradora" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/Captura_de_pantalla_2023-11-02_a_las_11.48.04-removebg-preview.png" alt="Clínica colaboradora" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/FISIOTONIK-logo-%403x.png" alt="FisioTonik" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/Fisiolab-logo-blanco-verde.png" alt="Fisiolab" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/Fondo-Transparente_Logotipo_Horizontal--scaled.webp" alt="Clínica colaboradora" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/Logo-Web-final-texto.png" alt="Clínica colaboradora" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/Logo_KINESI-12.png.webp" alt="Kinesi" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/Marca-_-FISPO.png" alt="Fispo" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/Tarjeta-horizontal-768x243.png" alt="Clínica colaboradora" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/cropped-LOGOFISIOACTIVOclinics-scaled-1.webp" alt="FisioActivo Clinics" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/cropped-cropped-ime-montsia-salut-favicon.png" alt="IME Montsià Salut" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/fisiosentis.png" alt="FisioSentis" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/fisioterapia-aravaca-logo-azul_Mesa-de-trabajo-1-copia.png" alt="Fisioterapia Aravaca" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/fisioterapia-goya-madrid-logo.png" alt="Fisioterapia Goya Madrid" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/images.png" alt="Clínica colaboradora" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/kines_logo.png" alt="Kines" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/log3.png" alt="Clínica colaboradora" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/logo-activefisio-mallorcax2.png" alt="ActiveFisio Mallorca" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/logo-big.svg" alt="Clínica colaboradora" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/logo-clinica-fragma.png" alt="Clínica Fragma" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/logo-clinica-teknos.png" alt="Clínica Teknos" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/logo-tkh-1.png" alt="TKH" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/logo.png" alt="Clínica colaboradora" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/logo.svg" alt="Clínica colaboradora" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/logo_41.png" alt="Clínica colaboradora" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/logo_6813e54bebdad45923017289e9162353_2x.png" alt="Clínica colaboradora" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/logo_osteovng_1.png" alt="OsteoVNG" loading="lazy">
+        <img class="carousel-logo" src="LOGOS%20FISIOS/logob.png" alt="Clínica colaboradora" loading="lazy">
       </div>
     </div>
   </section>
@@ -661,22 +670,34 @@
       <p class="section-sub">No es un curso de marketing. No es teoría de negocio. Es un sistema de implementación que instala las bases de una clínica rentable en 4 meses.</p>
       <div class="what-pillars">
         <div class="pillar">
-          <span class="pillar-number">1</span>
+          <span class="pillar-icon">
+            <!-- Activación mental: cerebro con rayo -->
+            <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7z"/><line x1="9" y1="21" x2="15" y2="21"/><line x1="10" y1="24" x2="14" y2="24"/><path d="M12 2V6"/><path d="M12 6l-2 3h4l-2 3"/></svg>
+          </span>
           <h3>Activación mental</h3>
           <p>Cambias el chip: de técnico reactivo a dueño con criterio empresarial. Sin dejar de ser fisio.</p>
         </div>
         <div class="pillar">
-          <span class="pillar-number">2</span>
+          <span class="pillar-icon">
+            <!-- Estrategia: diana/objetivo -->
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/><line x1="22" y1="12" x2="18" y2="12"/><line x1="6" y1="12" x2="2" y2="12"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/></svg>
+          </span>
           <h3>Estrategia</h3>
           <p>Defines tu propuesta de valor, tu pricing con margen real y tu oferta mínima viable. Sin inventar — validando.</p>
         </div>
         <div class="pillar">
-          <span class="pillar-number">3</span>
+          <span class="pillar-icon">
+            <!-- Implementación: engranaje/cohete -->
+            <svg viewBox="0 0 24 24"><path d="M4.5 16.5L3 22l5.5-1.5L22 7l-3-3L5.5 17.5"/><path d="M14.5 5.5l4 4"/><path d="M3 22l2.5-2.5"/><line x1="9" y1="15" x2="5" y2="19"/><path d="M18 2l4 4"/></svg>
+          </span>
           <h3>Implementación</h3>
           <p>Montas tu captación, tu sistema de conversión y tu recurrencia. Lo que hace que los pacientes lleguen y vuelvan.</p>
         </div>
         <div class="pillar">
-          <span class="pillar-number">4</span>
+          <span class="pillar-icon">
+            <!-- Validación: check con gráfica -->
+            <svg viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/><line x1="2" y1="22" x2="22" y2="22"/><line x1="2" y1="2" x2="2" y2="22"/></svg>
+          </span>
           <h3>Validación</h3>
           <p>Mides lo que importa, ajustas lo que falla y sales con un plan de acción real para los próximos 90 días.</p>
         </div>
