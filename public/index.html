@@ -170,6 +170,31 @@
       border-left: 3px solid var(--gold); padding-left: 20px; margin: 32px 0;
       font-style: italic; font-size: 19px; color: var(--navy); line-height: 1.6;
     }
+    .polaroid {
+      float: right; margin: 0 0 24px 32px;
+      background: #fff; padding: 10px 10px 36px; width: 200px;
+      box-shadow: 2px 4px 20px rgba(0,0,0,0.12);
+      transform: rotate(2.5deg); position: relative;
+    }
+    .polaroid img { width: 100%; height: auto; display: block; }
+    .polaroid .caption {
+      position: absolute; bottom: 8px; left: 0; right: 0;
+      text-align: center; font-size: 13px; font-weight: 600;
+      color: var(--text-light); font-family: 'Inter', sans-serif;
+    }
+    .polaroid .pin {
+      position: absolute; top: -10px; left: 50%; transform: translateX(-50%);
+      width: 20px; height: 20px; background: var(--danger); border-radius: 50%;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2); z-index: 2;
+    }
+    .polaroid .pin::after {
+      content: ''; position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%); width: 6px; height: 6px;
+      background: rgba(255,255,255,0.5); border-radius: 50%;
+    }
+    @media (max-width: 640px) {
+      .polaroid { float: none; margin: 0 auto 24px; }
+    }
 
     /* --- WHAT --- */
     .what { padding: 80px 24px; background: var(--bg); }
@@ -523,6 +548,12 @@
   <section class="story">
     <div class="story-inner">
       <h2>El problema no es trabajar poco — es trabajar sin sistema</h2>
+      <!-- NOTA: Asegúrate de que foto-alex-inicios.jpg está en public/ del repo -->
+      <div class="polaroid">
+        <div class="pin"></div>
+        <img src="foto-alex-inicios.JPG" alt="Álex Vallés en los inicios de su clínica">
+        <div class="caption">Yo antes del burnout</div>
+      </div>
       <p>Cuando abrí FisioZaragoza, estaba convencido de que ser buen fisio era suficiente. Me había pasado años formándome en técnicas, cursos, congresos... Pensaba que si trataba bien, los pacientes llegarían solos.</p>
       <p>Y llegaron. Pero también llegó el caos. Agenda llena, margen vacío. Decisiones a ciegas. Inversiones que no servían para nada — como los 50.000 euros que metí en una máquina AlterG que nunca recuperé.</p>
       <div class="quote">
@@ -607,7 +638,7 @@
   <section class="testimonials">
     <div class="container-wide">
       <h2 class="section-title">Esto es lo que dicen quienes ya han trabajado con FisioReferentes</h2>
-      <p class="section-sub">Más de 100 fisioterapeutas han pasado por nuestras formaciones. Estos son algunos de sus mensajes reales.</p>
+      <p class="section-sub">Más de 200 fisioterapeutas dueños de negocio han pasado por nuestras formaciones. Estos son algunos de sus mensajes reales.</p>
       <div class="testimonials-grid">
 
         <div class="testimonial-card">
@@ -858,7 +889,7 @@
           <div class="desc">facturación anual</div>
         </div>
         <div class="alex-stat">
-          <div class="num">100+</div>
+          <div class="num">200+</div>
           <div class="desc">fisios acompañados</div>
         </div>
       </div>
@@ -904,7 +935,7 @@
         </div>
         <div class="faq-item">
           <div class="faq-q">¿Qué pasa si no me funciona?</div>
-          <div class="faq-a">La metodología de FisioReferentes ha sido validada con más de 100 fisioterapeutas. No prometemos milagros — prometemos un sistema probado. Si sigues los playbooks, implementas los planes de acción y asistes a las mentorías, los resultados llegan. Y si en algún momento sientes que no es para ti, hablamos. Aquí no atamos a nadie.</div>
+          <div class="faq-a">La metodología de FisioReferentes ha sido validada con más de 200 fisioterapeutas dueños de negocio. No prometemos milagros — prometemos un sistema probado. Si sigues los playbooks, implementas los planes de acción y asistes a las mentorías, los resultados llegan. Y si en algún momento sientes que no es para ti, hablamos. Aquí no atamos a nadie.</div>
         </div>
       </div>
     </div>
