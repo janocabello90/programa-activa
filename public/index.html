@@ -64,15 +64,8 @@
       top: 0;
       z-index: 100;
     }
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-    }
-    .nav-logo img {
-      height: 36px;
-      width: auto;
-    }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; }
+    .nav-logo img { height: 36px; width: auto; }
 
     /* --- HERO --- */
     .hero {
@@ -80,298 +73,281 @@
       text-align: center;
       background: linear-gradient(180deg, var(--bg-soft) 0%, var(--bg) 100%);
     }
-    .hero-logo {
-      max-width: 360px;
-      margin: 0 auto 40px;
-    }
-    .hero-logo img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    /* Placeholder cuando no hay imagen cargada */
+    .hero-logo { max-width: 360px; margin: 0 auto 40px; }
+    .hero-logo img { width: 100%; height: auto; display: block; }
     .hero-logo-placeholder {
-      background: var(--dark);
-      border-radius: 16px;
-      padding: 36px 48px;
-      display: inline-block;
-      margin-bottom: 40px;
+      background: var(--dark); border-radius: 16px;
+      padding: 36px 48px; display: inline-block; margin-bottom: 40px;
     }
-    .hero-logo-placeholder .logo-activa {
-      font-size: 52px;
-      font-weight: 900;
-      color: var(--navy-light);
-      letter-spacing: 0.08em;
-      line-height: 1;
-    }
-    .hero-logo-placeholder .logo-sub {
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--navy-light);
-      letter-spacing: 0.15em;
-      margin-top: 6px;
-    }
-    .hero-logo-placeholder .logo-star {
-      color: var(--gold);
-    }
+    .hero-logo-placeholder .logo-activa { font-size: 52px; font-weight: 900; color: var(--navy-light); letter-spacing: 0.08em; line-height: 1; }
+    .hero-logo-placeholder .logo-sub { font-size: 15px; font-weight: 600; color: var(--navy-light); letter-spacing: 0.15em; margin-top: 6px; }
+    .hero-logo-placeholder .logo-star { color: var(--gold); }
     .hero h1 {
-      font-size: clamp(30px, 4.5vw, 48px);
-      font-weight: 900;
-      line-height: 1.12;
-      color: var(--dark);
-      max-width: 740px;
-      margin: 0 auto 24px;
-      letter-spacing: -0.03em;
+      font-size: clamp(30px, 4.5vw, 48px); font-weight: 900; line-height: 1.12;
+      color: var(--dark); max-width: 740px; margin: 0 auto 24px; letter-spacing: -0.03em;
     }
     .hero h1 .gold { color: var(--gold); }
     .hero-sub {
-      font-size: clamp(16px, 2vw, 19px);
-      color: var(--text-light);
-      max-width: 620px;
-      margin: 0 auto 40px;
-      line-height: 1.65;
+      font-size: clamp(16px, 2vw, 19px); color: var(--text-light);
+      max-width: 620px; margin: 0 auto 40px; line-height: 1.65;
     }
     .cta-btn {
-      display: inline-block;
-      background: var(--gold);
-      color: #fff;
-      font-size: 17px;
-      font-weight: 700;
-      padding: 18px 48px;
-      border-radius: var(--radius);
-      text-decoration: none;
-      transition: all 0.25s;
-      box-shadow: 0 4px 20px rgba(194,162,77,0.3);
+      display: inline-block; background: var(--gold); color: #fff;
+      font-size: 17px; font-weight: 700; padding: 18px 48px;
+      border-radius: var(--radius); text-decoration: none;
+      transition: all 0.25s; box-shadow: 0 4px 20px rgba(194,162,77,0.3);
     }
     .cta-btn:hover {
-      background: var(--gold-hover);
-      transform: translateY(-2px);
+      background: var(--gold-hover); transform: translateY(-2px);
       box-shadow: 0 8px 28px rgba(194,162,77,0.35);
     }
-    .hero-micro {
-      font-size: 13px;
-      color: var(--text-light);
-      margin-top: 14px;
+    .cta-btn-outline {
+      display: inline-block; background: transparent; color: var(--gold);
+      font-size: 15px; font-weight: 700; padding: 14px 36px;
+      border-radius: var(--radius); text-decoration: none;
+      border: 2px solid var(--gold); transition: all 0.25s;
+    }
+    .cta-btn-outline:hover { background: var(--gold); color: #fff; }
+    .hero-micro { font-size: 13px; color: var(--text-light); margin-top: 14px; }
+
+    /* --- TRUST BAR --- */
+    .trust-bar {
+      padding: 32px 24px;
+      background: var(--bg-soft);
+      border-bottom: 1px solid var(--border);
+    }
+    .trust-bar-label {
+      text-align: center; font-size: 12px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--text-light); margin-bottom: 20px;
+    }
+    .trust-logos {
+      display: flex; justify-content: center; align-items: center;
+      gap: 40px; flex-wrap: wrap; opacity: 0.5;
+    }
+    .trust-logo {
+      font-size: 14px; font-weight: 700; color: var(--navy);
+      letter-spacing: 0.02em; white-space: nowrap;
+    }
+    .trust-logo img { height: 32px; width: auto; filter: grayscale(100%); opacity: 0.6; }
+
+    /* --- SECTION STYLES --- */
+    .section-title {
+      font-size: clamp(24px, 3.5vw, 36px); font-weight: 800; color: var(--dark);
+      text-align: center; max-width: 680px; margin: 0 auto 16px;
+      letter-spacing: -0.02em; line-height: 1.2;
+    }
+    .section-sub {
+      text-align: center; color: var(--text-light); max-width: 580px;
+      margin: 0 auto 48px; font-size: 17px;
     }
 
     /* --- PAIN SECTION --- */
-    .pain {
-      padding: 80px 24px;
-      background: var(--bg);
-    }
-    .section-title {
-      font-size: clamp(24px, 3.5vw, 36px);
-      font-weight: 800;
-      color: var(--dark);
-      text-align: center;
-      max-width: 680px;
-      margin: 0 auto 16px;
-      letter-spacing: -0.02em;
-      line-height: 1.2;
-    }
-    .section-sub {
-      text-align: center;
-      color: var(--text-light);
-      max-width: 580px;
-      margin: 0 auto 48px;
-      font-size: 17px;
-    }
+    .pain { padding: 80px 24px; background: var(--bg); }
     .pain-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 16px;
-      max-width: 880px;
-      margin: 0 auto;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px; max-width: 880px; margin: 0 auto;
     }
     .pain-card {
-      background: var(--bg-soft);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 28px;
+      background: var(--bg-soft); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 28px;
       transition: border-color 0.2s, box-shadow 0.2s;
     }
-    .pain-card:hover {
-      border-color: #CBD5E1;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
-    }
+    .pain-card:hover { border-color: #CBD5E1; box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
     .pain-card .icon { font-size: 28px; margin-bottom: 12px; display: block; }
     .pain-card h3 { font-size: 16px; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
     .pain-card p { font-size: 14px; color: var(--text-light); line-height: 1.65; }
 
     /* --- STORY --- */
-    .story {
-      padding: 80px 24px;
-      background: var(--bg-warm);
-    }
+    .story { padding: 80px 24px; background: var(--bg-warm); }
     .story-inner { max-width: 680px; margin: 0 auto; }
     .story h2 {
-      font-size: clamp(24px, 3.5vw, 34px);
-      font-weight: 800;
-      color: var(--dark);
-      margin-bottom: 24px;
-      letter-spacing: -0.02em;
-      line-height: 1.2;
+      font-size: clamp(24px, 3.5vw, 34px); font-weight: 800; color: var(--dark);
+      margin-bottom: 24px; letter-spacing: -0.02em; line-height: 1.2;
     }
-    .story p {
-      font-size: 17px;
-      margin-bottom: 20px;
-      color: var(--text);
-      line-height: 1.75;
-    }
+    .story p { font-size: 17px; margin-bottom: 20px; color: var(--text); line-height: 1.75; }
     .story .quote {
-      border-left: 3px solid var(--gold);
-      padding-left: 20px;
-      margin: 32px 0;
-      font-style: italic;
-      font-size: 19px;
-      color: var(--navy);
-      line-height: 1.6;
+      border-left: 3px solid var(--gold); padding-left: 20px; margin: 32px 0;
+      font-style: italic; font-size: 19px; color: var(--navy); line-height: 1.6;
     }
 
     /* --- WHAT --- */
-    .what {
-      padding: 80px 24px;
-      background: var(--bg);
-    }
+    .what { padding: 80px 24px; background: var(--bg); }
     .what-pillars {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      max-width: 960px;
-      margin: 0 auto;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px; max-width: 960px; margin: 0 auto;
     }
     .pillar {
-      text-align: center;
-      padding: 32px 24px;
-      background: var(--bg-soft);
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
+      text-align: center; padding: 32px 24px; background: var(--bg-soft);
+      border-radius: var(--radius); border: 1px solid var(--border);
     }
     .pillar-number {
-      display: inline-flex;
-      width: 48px; height: 48px;
+      display: inline-flex; width: 48px; height: 48px;
       align-items: center; justify-content: center;
-      background: var(--navy);
-      color: var(--gold);
-      font-size: 20px; font-weight: 800;
-      border-radius: 50%;
-      margin-bottom: 16px;
+      background: var(--navy); color: var(--gold);
+      font-size: 20px; font-weight: 800; border-radius: 50%; margin-bottom: 16px;
     }
     .pillar h3 { font-size: 17px; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
     .pillar p { font-size: 14px; color: var(--text-light); line-height: 1.65; }
 
-    /* --- RESULTS --- */
-    .results {
-      padding: 80px 24px;
-      background: var(--navy);
-      color: #fff;
-    }
+    /* --- RESULTS EXPANDED --- */
+    .results { padding: 80px 24px; background: var(--navy); color: #fff; }
     .results .section-title { color: #fff; }
     .results .section-sub { color: rgba(255,255,255,0.65); }
-    .results-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 16px;
-      max-width: 900px;
-      margin: 0 auto;
+    .results-list { max-width: 720px; margin: 0 auto; }
+    .result-block { padding: 28px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .result-block:last-child { border-bottom: none; }
+    .result-block h3 {
+      font-size: 19px; font-weight: 700; color: #fff; margin-bottom: 8px;
+      display: flex; align-items: center; gap: 12px;
     }
-    .result-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      padding: 20px;
-      background: rgba(255,255,255,0.07);
-      border-radius: var(--radius);
-      border: 1px solid rgba(255,255,255,0.1);
-    }
-    .result-check {
-      flex-shrink: 0;
-      width: 28px; height: 28px;
-      background: var(--gold);
-      color: var(--dark);
-      border-radius: 50%;
+    .result-block h3 .check {
+      flex-shrink: 0; width: 28px; height: 28px; background: var(--gold);
+      color: var(--dark); border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
       font-size: 13px; font-weight: 800;
-      margin-top: 2px;
     }
-    .result-item p { font-size: 15px; line-height: 1.55; color: rgba(255,255,255,0.9); }
-    .result-item strong { color: #fff; }
+    .result-block p { font-size: 15px; color: rgba(255,255,255,0.7); line-height: 1.65; margin-left: 40px; }
+
+    /* --- TESTIMONIALS --- */
+    .testimonials { padding: 80px 24px; background: var(--bg-warm); }
+    .testimonials-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px; max-width: 960px; margin: 0 auto;
+    }
+    .testimonial-card {
+      background: #fff; border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 32px; position: relative;
+    }
+    .testimonial-card::before {
+      content: '"'; position: absolute; top: 16px; left: 24px;
+      font-size: 48px; color: var(--gold); opacity: 0.3; font-family: Georgia, serif; line-height: 1;
+    }
+    .testimonial-text {
+      font-size: 15px; color: var(--text); line-height: 1.7;
+      margin-bottom: 20px; font-style: italic;
+    }
+    .testimonial-author { display: flex; align-items: center; gap: 12px; }
+    .testimonial-avatar {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--navy); color: var(--gold); font-size: 16px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .testimonial-avatar img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+    .testimonial-name { font-size: 14px; font-weight: 700; color: var(--dark); }
+    .testimonial-role { font-size: 12px; color: var(--text-light); }
+    .testimonial-result {
+      display: inline-block; background: var(--gold-bg); color: var(--gold-hover);
+      font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 6px;
+      margin-top: 8px;
+    }
+    .testimonials-pending {
+      text-align: center; margin-top: 32px; padding: 20px;
+      background: rgba(194,162,77,0.08); border: 1px dashed var(--gold);
+      border-radius: var(--radius); font-size: 13px; color: var(--text-light);
+      display: none; /* Ocultar en producción, solo visible en desarrollo */
+    }
+
+    /* --- BECA --- */
+    .beca { padding: 80px 24px; background: var(--gold-bg); text-align: center; }
+    .beca-inner { max-width: 720px; margin: 0 auto; }
+    .beca-badge {
+      display: inline-block; background: var(--gold); color: #fff;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; padding: 6px 18px;
+      border-radius: 100px; margin-bottom: 24px;
+    }
+    .beca h2 {
+      font-size: clamp(26px, 4vw, 40px); font-weight: 900; color: var(--dark);
+      margin-bottom: 16px; letter-spacing: -0.03em; line-height: 1.15;
+    }
+    .beca h2 .gold { color: var(--gold); }
+    .beca .beca-inner p { font-size: 17px; color: var(--text); margin-bottom: 12px; line-height: 1.65; }
+    .beca-stats {
+      display: flex; justify-content: center; gap: 40px;
+      margin: 36px 0; flex-wrap: wrap;
+    }
+    .beca-stat { text-align: center; }
+    .beca-stat .num { font-size: 32px; font-weight: 900; color: var(--navy); line-height: 1; }
+    .beca-stat .desc { font-size: 13px; color: var(--text-light); margin-top: 6px; }
+    .beca-note { font-size: 15px; color: var(--text-light); margin-top: 24px; line-height: 1.6; }
+
+    /* --- HOW IT WORKS --- */
+    .howitworks { padding: 80px 24px; background: var(--bg); }
+    .steps-row {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 24px; max-width: 860px; margin: 0 auto;
+    }
+    @media (max-width: 640px) { .steps-row { grid-template-columns: 1fr; } }
+    .step-card { text-align: center; padding: 28px 20px; }
+    .step-num {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: var(--gold); color: #fff;
+      font-size: 22px; font-weight: 800;
+      display: inline-flex; align-items: center; justify-content: center;
+      margin-bottom: 20px;
+    }
+    .step-card h3 { font-size: 17px; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
+    .step-card p { font-size: 14px; color: var(--text-light); line-height: 1.6; }
+    .step-connector {
+      display: none; /* visible via grid on desktop */
+    }
 
     /* --- FOR WHO --- */
     .forwho { padding: 80px 24px; background: var(--bg-soft); }
     .forwho-cols {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      max-width: 840px;
-      margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 24px; max-width: 840px; margin: 0 auto;
     }
     @media (max-width: 640px) { .forwho-cols { grid-template-columns: 1fr; } }
     .forwho-col {
-      background: #fff;
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      padding: 28px;
+      background: #fff; border-radius: var(--radius);
+      border: 1px solid var(--border); padding: 28px;
     }
     .forwho-col h3 {
-      font-size: 17px; font-weight: 700;
-      margin-bottom: 20px;
+      font-size: 17px; font-weight: 700; margin-bottom: 20px;
       display: flex; align-items: center; gap: 8px;
     }
     .forwho-col.yes h3 { color: var(--success); }
     .forwho-col.no h3 { color: var(--danger); }
     .forwho-col ul { list-style: none; padding: 0; }
     .forwho-col li {
-      padding: 10px 0; font-size: 14px;
-      border-bottom: 1px solid var(--border);
+      padding: 10px 0; font-size: 14px; border-bottom: 1px solid var(--border);
       display: flex; align-items: flex-start; gap: 10px;
       line-height: 1.55; color: var(--text);
     }
     .forwho-col li:last-child { border-bottom: none; }
     .forwho-col li .mark { flex-shrink: 0; font-size: 14px; margin-top: 2px; color: var(--text-light); }
 
-    /* --- INCLUDES --- */
+    /* --- INCLUDES EXPANDED --- */
     .includes { padding: 80px 24px; background: var(--bg); }
-    .includes-list { max-width: 640px; margin: 0 auto; }
-    .include-item {
-      display: flex; align-items: flex-start; gap: 16px;
-      padding: 20px 0;
-      border-bottom: 1px solid var(--border);
+    .includes-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px; max-width: 960px; margin: 0 auto;
     }
-    .include-item:last-child { border-bottom: none; }
-    .include-icon {
-      flex-shrink: 0;
-      width: 44px; height: 44px;
-      background: var(--navy);
-      color: var(--gold);
-      border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 20px;
+    .include-card {
+      background: var(--bg-soft); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 28px;
     }
-    .include-item h3 { font-size: 16px; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
-    .include-item p { font-size: 14px; color: var(--text-light); line-height: 1.55; }
+    .include-card-icon {
+      width: 48px; height: 48px; background: var(--navy); color: var(--gold);
+      border-radius: 10px; display: flex; align-items: center; justify-content: center;
+      font-size: 22px; margin-bottom: 16px;
+    }
+    .include-card h3 { font-size: 16px; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
+    .include-card p { font-size: 14px; color: var(--text-light); line-height: 1.65; }
+    .include-card .detail {
+      font-size: 12px; color: var(--gold); font-weight: 600;
+      margin-top: 10px; text-transform: uppercase; letter-spacing: 0.05em;
+    }
 
     /* --- ECOSYSTEM --- */
     .ecosystem { padding: 64px 24px; background: var(--bg-soft); }
-    .ecosystem h2 {
-      font-size: 20px; font-weight: 800; color: var(--dark);
-      text-align: center; margin-bottom: 32px;
-    }
-    .eco-steps {
-      display: flex; justify-content: center; align-items: center;
-      gap: 16px; flex-wrap: wrap;
-    }
-    .eco-step {
-      padding: 14px 28px; border-radius: var(--radius);
-      font-weight: 700; font-size: 15px; text-align: center;
-    }
-    .eco-step.active {
-      background: var(--gold); color: #fff;
-      box-shadow: 0 4px 16px rgba(194,162,77,0.25);
-    }
-    .eco-step.inactive {
-      background: #fff; border: 1px solid var(--border); color: var(--text-light);
-    }
+    .ecosystem h2 { font-size: 20px; font-weight: 800; color: var(--dark); text-align: center; margin-bottom: 32px; }
+    .eco-steps { display: flex; justify-content: center; align-items: center; gap: 16px; flex-wrap: wrap; }
+    .eco-step { padding: 14px 28px; border-radius: var(--radius); font-weight: 700; font-size: 15px; text-align: center; }
+    .eco-step.active { background: var(--gold); color: #fff; box-shadow: 0 4px 16px rgba(194,162,77,0.25); }
+    .eco-step.inactive { background: #fff; border: 1px solid var(--border); color: var(--text-light); }
     .eco-arrow { font-size: 18px; color: var(--text-light); }
     .eco-note { text-align: center; font-size: 14px; color: var(--text-light); margin-top: 16px; }
 
@@ -383,30 +359,19 @@
       background: var(--navy); border: 3px solid var(--gold);
       color: var(--gold); font-size: 32px; font-weight: 800;
       display: inline-flex; align-items: center; justify-content: center;
-      margin-bottom: 24px;
+      margin-bottom: 24px; overflow: hidden;
     }
+    .alex-avatar img { width: 100%; height: 100%; object-fit: cover; }
     .alex h2 { font-size: 26px; font-weight: 800; color: var(--dark); margin-bottom: 6px; }
     .alex .role { font-size: 15px; color: var(--gold); font-weight: 600; margin-bottom: 24px; }
-    .alex p {
-      font-size: 16px; color: var(--text); line-height: 1.75;
-      margin-bottom: 16px; text-align: left;
-    }
-    .alex-stats {
-      display: flex; justify-content: center; gap: 40px;
-      margin-top: 32px; flex-wrap: wrap;
-    }
+    .alex p { font-size: 16px; color: var(--text); line-height: 1.75; margin-bottom: 16px; text-align: left; }
+    .alex-stats { display: flex; justify-content: center; gap: 40px; margin-top: 32px; flex-wrap: wrap; }
     .alex-stat { text-align: center; }
     .alex-stat .num { font-size: 26px; font-weight: 800; color: var(--navy); }
-    .alex-stat .desc {
-      font-size: 12px; color: var(--text-light); margin-top: 4px;
-      text-transform: uppercase; letter-spacing: 0.05em;
-    }
+    .alex-stat .desc { font-size: 12px; color: var(--text-light); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.05em; }
 
-    /* --- MASTERCLASS CTA --- */
-    .mc-cta {
-      padding: 80px 24px; text-align: center;
-      background: var(--navy-deep); color: #fff;
-    }
+    /* --- WEBINAR CTA --- */
+    .mc-cta { padding: 80px 24px; text-align: center; background: var(--navy-deep); color: #fff; }
     .mc-cta-inner { max-width: 640px; margin: 0 auto; }
     .mc-badge {
       display: inline-block; background: var(--gold); color: #fff;
@@ -414,46 +379,12 @@
       text-transform: uppercase; padding: 6px 18px;
       border-radius: 100px; margin-bottom: 24px;
     }
-    .mc-cta h2 {
-      font-size: clamp(26px, 4vw, 40px); font-weight: 900;
-      margin-bottom: 16px; letter-spacing: -0.03em; line-height: 1.15;
-    }
-    .mc-cta-inner > p {
-      font-size: 17px; color: rgba(255,255,255,0.7);
-      margin-bottom: 12px; line-height: 1.65;
-    }
-    .mc-details {
-      display: flex; justify-content: center; gap: 32px;
-      margin: 32px 0; flex-wrap: wrap;
-    }
+    .mc-cta h2 { font-size: clamp(26px, 4vw, 40px); font-weight: 900; margin-bottom: 16px; letter-spacing: -0.03em; line-height: 1.15; }
+    .mc-cta-inner > p { font-size: 17px; color: rgba(255,255,255,0.7); margin-bottom: 12px; line-height: 1.65; }
+    .mc-details { display: flex; justify-content: center; gap: 32px; margin: 32px 0; flex-wrap: wrap; }
     .mc-detail { text-align: center; }
-    .mc-detail .label {
-      font-size: 11px; text-transform: uppercase;
-      letter-spacing: 0.1em; color: rgba(255,255,255,0.45); margin-bottom: 4px;
-    }
+    .mc-detail .label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.45); margin-bottom: 4px; }
     .mc-detail .value { font-size: 17px; font-weight: 700; color: var(--gold); }
-    .mc-form {
-      margin-top: 32px; display: flex; gap: 12px;
-      max-width: 480px; margin-left: auto; margin-right: auto;
-    }
-    .mc-form input {
-      flex: 1; padding: 16px 20px;
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: var(--radius);
-      background: rgba(255,255,255,0.06);
-      color: #fff; font-size: 15px; font-family: inherit;
-      outline: none; transition: border 0.2s;
-    }
-    .mc-form input::placeholder { color: rgba(255,255,255,0.35); }
-    .mc-form input:focus { border-color: var(--gold); }
-    .mc-form button {
-      padding: 16px 32px; background: var(--gold); color: #fff;
-      border: none; border-radius: var(--radius);
-      font-size: 15px; font-weight: 700; font-family: inherit;
-      cursor: pointer; transition: all 0.2s; white-space: nowrap;
-    }
-    .mc-form button:hover { background: var(--gold-light); transform: translateY(-1px); }
-    @media (max-width: 520px) { .mc-form { flex-direction: column; } }
     .mc-micro { font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 14px; }
 
     /* --- FAQ --- */
@@ -464,44 +395,21 @@
       font-size: 16px; font-weight: 700; color: var(--dark); cursor: pointer;
       display: flex; justify-content: space-between; align-items: center; gap: 16px;
     }
-    .faq-q::after {
-      content: '+'; font-size: 22px; color: var(--gold);
-      font-weight: 400; flex-shrink: 0; transition: transform 0.2s;
-    }
+    .faq-q::after { content: '+'; font-size: 22px; color: var(--gold); font-weight: 400; flex-shrink: 0; transition: transform 0.2s; }
     .faq-item.open .faq-q::after { transform: rotate(45deg); }
-    .faq-a {
-      font-size: 15px; color: var(--text-light); line-height: 1.7;
-      max-height: 0; overflow: hidden;
-      transition: max-height 0.3s ease, padding 0.3s ease;
-    }
-    .faq-item.open .faq-a { max-height: 300px; padding-top: 14px; }
+    .faq-a { font-size: 15px; color: var(--text-light); line-height: 1.7; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; }
+    .faq-item.open .faq-a { max-height: 400px; padding-top: 14px; }
 
     /* --- FINAL CTA --- */
     .final-cta {
       padding: 80px 24px; text-align: center;
-      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
-      color: #fff;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%); color: #fff;
     }
-    .final-cta h2 {
-      font-size: clamp(26px, 4vw, 38px); font-weight: 900;
-      margin-bottom: 16px; letter-spacing: -0.03em; line-height: 1.15;
-    }
+    .final-cta h2 { font-size: clamp(26px, 4vw, 38px); font-weight: 900; margin-bottom: 16px; letter-spacing: -0.03em; line-height: 1.15; }
     .final-cta h2 .gold { color: var(--gold); }
-    .final-cta p {
-      font-size: 17px; color: rgba(255,255,255,0.7);
-      max-width: 560px; margin: 0 auto 36px; line-height: 1.65;
-    }
-    .final-cta a {
-      display: inline-block; background: var(--gold); color: #fff;
-      font-size: 17px; font-weight: 700; padding: 18px 48px;
-      border-radius: var(--radius); text-decoration: none;
-      transition: all 0.25s;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-    }
-    .final-cta a:hover {
-      background: var(--gold-light); transform: translateY(-2px);
-      box-shadow: 0 8px 28px rgba(0,0,0,0.3);
-    }
+    .final-cta p { font-size: 17px; color: rgba(255,255,255,0.7); max-width: 560px; margin: 0 auto 36px; line-height: 1.65; }
+    .final-cta a.cta-btn { box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+    .final-cta a.cta-btn:hover { box-shadow: 0 8px 28px rgba(0,0,0,0.3); }
 
     /* --- FOOTER --- */
     .footer {
@@ -510,13 +418,33 @@
     }
     .footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
     .footer a:hover { color: #fff; }
+
+    /* --- WHATSAPP FLOAT --- */
+    .wa-float {
+      position: fixed; bottom: 24px; right: 24px; z-index: 999;
+      width: 60px; height: 60px; border-radius: 50%;
+      background: #25D366; color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      text-decoration: none; font-size: 30px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .wa-float:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(0,0,0,0.3); }
+    .wa-float svg { width: 32px; height: 32px; fill: #fff; }
+
+    /* --- MID-CTA BREAK --- */
+    .mid-cta {
+      padding: 48px 24px; text-align: center;
+      background: var(--bg-soft); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+    }
+    .mid-cta p { font-size: 17px; font-weight: 600; color: var(--dark); margin-bottom: 16px; }
   </style>
 </head>
 <body>
 
   <!-- TOP BAR -->
   <div class="topbar">
-    Plazas limitadas por cohorte — <strong>Masterclass gratuita próximamente</strong>
+    Solo 25 becas disponibles — <strong>Solicita la tuya antes del cierre</strong>
   </div>
 
   <!-- NAV -->
@@ -527,29 +455,34 @@
   <!-- HERO -->
   <section class="hero">
     <div class="container">
-
-      <!--
-        =============================================
-        LOGO: Reemplaza la ruta de abajo con la URL
-        real del logo una vez esté subido a GitHub.
-        Ejemplo: src="https://raw.githubusercontent.com/tu-org/activa-assets/main/logo-activa.png"
-        =============================================
-      -->
       <div class="hero-logo">
         <img src="logo-activa.png" alt="ACTIVA by FisioReferentes" onerror="this.parentElement.innerHTML='<div class=hero-logo-placeholder><div class=logo-activa>ACTIVA</div><div class=logo-sub>by FISIOREFERENTES <span class=logo-star>★</span></div></div>'">
       </div>
+      <h1>De autónomo atrapado a dueño de una clínica <span class="gold">funcional y rentable.</span></h1>
+      <p class="hero-sub">Tu problema no eres tú — nadie te enseñó esto. ACTIVA es el sistema de 4 meses que te da estructura, dirección y rentabilidad real. Para fisioterapeutas que facturan de 0 a 100K y quieren dejar de improvisar con su negocio.</p>
+      <a href="https://form.typeform.com/to/Eeb7Hvur" class="cta-btn" target="_blank" rel="noopener">Solicita tu beca de 1.000€</a>
+      <p class="hero-micro">25 becas disponibles. Solicitud en 2 minutos.</p>
+    </div>
+  </section>
 
-      <h1>Deja de improvisar con tu clínica.<br>Empieza a <span class="gold">construirla bien.</span></h1>
-      <p class="hero-sub">ACTIVA es el sistema que te da estructura, dirección y rentabilidad desde el inicio. Para fisioterapeutas que montan su clínica o facturan hasta 100K y quieren evitar los errores que cuestan años y miles de euros.</p>
-      <a href="#masterclass" class="cta-btn">Reserva tu plaza en la Masterclass Gratuita</a>
-      <p class="hero-micro">Sin compromiso. Aprende primero, decide después.</p>
+  <!-- TRUST BAR -->
+  <!-- PENDIENTE: Reemplazar los textos con logos reales de clínicas/instituciones colaboradoras -->
+  <section class="trust-bar">
+    <p class="trust-bar-label">FisioReferentes ha trabajado con</p>
+    <div class="trust-logos">
+      <!-- TODO: Sustituir por <img src="logo-X.png"> cuando tengáis los logos -->
+      <span class="trust-logo">FisioZaragoza</span>
+      <span class="trust-logo">Clínica Podium</span>
+      <span class="trust-logo">[Logo clínica 3]</span>
+      <span class="trust-logo">[Logo clínica 4]</span>
+      <span class="trust-logo">[Logo institución 5]</span>
     </div>
   </section>
 
   <!-- PAIN SECTION -->
   <section class="pain">
     <div class="container-wide">
-      <h2 class="section-title">Si acabas de abrir tu clínica (o estás a punto), probablemente esto te suena</h2>
+      <h2 class="section-title">¿Esto te suena?</h2>
       <p class="section-sub">No eres mal fisio. El problema es que nadie te enseñó a ser empresario.</p>
       <div class="pain-grid">
         <div class="pain-card">
@@ -558,9 +491,14 @@
           <p>Facturas algo, pero entre alquiler, seguro, material y tu tiempo... lo que queda al final del mes es deprimente. Y no sabes ni por dónde ajustar.</p>
         </div>
         <div class="pain-card">
+          <span class="icon">📉</span>
+          <h3>No sabes cuánto ganas de verdad</h3>
+          <p>No tienes claro tu margen real. Confundes facturación con beneficio. Y cuando miras la cuenta a final de mes, los números no cuadran con el esfuerzo que metes.</p>
+        </div>
+        <div class="pain-card">
           <span class="icon">🎯</span>
-          <h3>No sabes qué priorizar</h3>
-          <p>¿Más marketing? ¿Mejor web? ¿Nuevos servicios? ¿Redes sociales? Cada semana tienes una idea nueva y al final no ejecutas ninguna bien.</p>
+          <h3>No sabes vender tus tratamientos</h3>
+          <p>Te da vergüenza hablar de dinero con los pacientes. No sabes cómo presentar un plan de tratamiento sin sentir que estás "vendiendo". Y acabas regalando sesiones.</p>
         </div>
         <div class="pain-card">
           <span class="icon">🔄</span>
@@ -568,9 +506,14 @@
           <p>Unos meses bien, otros vacíos. No tienes un sistema que genere pacientes de forma constante. Vives de la recomendación y el boca a boca... y eso no escala.</p>
         </div>
         <div class="pain-card">
+          <span class="icon">🪤</span>
+          <h3>Estás construyendo una trampa, no un negocio</h3>
+          <p>Si tú paras, todo para. No tienes estructura, no tienes procesos, no tienes sistema. Has montado un autoempleo disfrazado de empresa.</p>
+        </div>
+        <div class="pain-card">
           <span class="icon">😰</span>
-          <h3>Sensación permanente de caos</h3>
-          <p>Eres el fisio, el recepcionista, el de redes, el contable y el de las compras. No tienes estructura. Y la incertidumbre te acompaña cada domingo por la noche.</p>
+          <h3>No puedes crecer más allá de tu esfuerzo personal</h3>
+          <p>Eres el fisio, el recepcionista, el de redes, el contable y el de las compras. Y la sensación de caos te acompaña cada domingo por la noche.</p>
         </div>
       </div>
     </div>
@@ -579,7 +522,7 @@
   <!-- STORY -->
   <section class="story">
     <div class="story-inner">
-      <h2>Yo también monté mi clínica con más ilusión que estrategia</h2>
+      <h2>El problema no es trabajar poco — es trabajar sin sistema</h2>
       <p>Cuando abrí FisioZaragoza, estaba convencido de que ser buen fisio era suficiente. Me había pasado años formándome en técnicas, cursos, congresos... Pensaba que si trataba bien, los pacientes llegarían solos.</p>
       <p>Y llegaron. Pero también llegó el caos. Agenda llena, margen vacío. Decisiones a ciegas. Inversiones que no servían para nada — como los 50.000 euros que metí en una máquina AlterG que nunca recuperé.</p>
       <div class="quote">
@@ -620,35 +563,147 @@
     </div>
   </section>
 
-  <!-- RESULTS -->
+  <!-- RESULTS — EXPANDED WITH EMOTIONAL BENEFITS -->
   <section class="results">
-    <div class="container-wide">
+    <div class="container">
       <h2 class="section-title">Lo que consigues en 4 meses</h2>
       <p class="section-sub">No promesas vacías. Resultados concretos que puedes medir.</p>
-      <div class="results-grid">
-        <div class="result-item">
-          <span class="result-check">✓</span>
-          <p><strong>Propuesta de valor clara y validada</strong> que te diferencia de cualquier otra clínica de tu zona</p>
+      <div class="results-list">
+        <div class="result-block">
+          <h3><span class="check">✓</span> Sabrás exactamente cuánto ganas (de verdad)</h3>
+          <p>Tendrás una propuesta de valor clara y validada, con un pricing basado en valor real — no en lo que cobra el de al lado. Por fin verás margen donde antes solo veías esfuerzo.</p>
         </div>
-        <div class="result-item">
-          <span class="result-check">✓</span>
-          <p><strong>Sistema de captación funcional</strong> que genera pacientes de forma predecible, no aleatoria</p>
+        <div class="result-block">
+          <h3><span class="check">✓</span> Pacientes que llegan de forma predecible</h3>
+          <p>Montarás un sistema de captación que funciona sin que tengas que estar pendiente cada día. Se acabó depender solo del boca a boca y la recomendación aleatoria.</p>
         </div>
-        <div class="result-item">
-          <span class="result-check">✓</span>
-          <p><strong>Pricing con margen real</strong> basado en valor, no en lo que cobra el de al lado</p>
+        <div class="result-block">
+          <h3><span class="check">✓</span> Pacientes que vuelven (porque has diseñado que lo hagan)</h3>
+          <p>Crearás un sistema de recurrencia activa que aumenta tu Lifetime Value. No es suerte — es estructura. Tus pacientes no solo vuelven, te recomiendan.</p>
         </div>
-        <div class="result-item">
-          <span class="result-check">✓</span>
-          <p><strong>Recurrencia activa</strong> — pacientes que vuelven porque has diseñado un sistema para ello</p>
+        <div class="result-block">
+          <h3><span class="check">✓</span> Decisiones con datos, no con intuición</h3>
+          <p>Dashboard de métricas básicas que te dice qué va bien, qué va mal y qué tocar primero. Se acabó gestionar la clínica "a ojo".</p>
         </div>
-        <div class="result-item">
-          <span class="result-check">✓</span>
-          <p><strong>Dashboard de métricas básicas</strong> para tomar decisiones con datos, no con intuición</p>
+        <div class="result-block">
+          <h3><span class="check">✓</span> Un plan de acción claro para los próximos 90 días</h3>
+          <p>Sales del programa sabiendo exactamente qué hacer, en qué orden y por qué. La incertidumbre que te acompaña cada domingo por la noche desaparece.</p>
         </div>
-        <div class="result-item">
-          <span class="result-check">✓</span>
-          <p><strong>Dirección clara para los próximos 90 días</strong> — sabes exactamente qué hacer y en qué orden</p>
+        <div class="result-block">
+          <h3><span class="check">✓</span> La base para dejar de ser el cuello de botella</h3>
+          <p>Empezarás a construir un negocio que no dependa 100% de ti. No para irte, sino para elegir dónde pones tu energía. Eso es libertad real.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MID-PAGE CTA -->
+  <div class="mid-cta">
+    <p>¿Te ves reflejado? Esto es exactamente lo que ACTIVA resuelve.</p>
+    <a href="https://form.typeform.com/to/Eeb7Hvur" class="cta-btn" target="_blank" rel="noopener">Solicita tu beca de 1.000€</a>
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <!-- PENDIENTE: Sustituir los testimonios placeholder con testimonios reales de alumnos del máster o consultorías de Álex -->
+  <section class="testimonials">
+    <div class="container-wide">
+      <h2 class="section-title">Fisioterapeutas que ya han dado el paso</h2>
+      <p class="section-sub">Esto es lo que dicen quienes han trabajado con FisioReferentes.</p>
+      <div class="testimonials-grid">
+
+        <!-- PENDIENTE: Testimonio real 1 — Sustituir nombre, texto, rol y foto -->
+        <div class="testimonial-card">
+          <p class="testimonial-text">"Llevaba 3 años con la clínica abierta y sentía que trabajaba para pagar facturas. Después del programa, por primera vez sé cuánto gano de verdad y tengo un plan claro. Ha sido un antes y un después."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">[F]</div>
+            <div>
+              <div class="testimonial-name">[Nombre del alumno/a]</div>
+              <div class="testimonial-role">[Ciudad] · Clínica de [X] fisios</div>
+              <span class="testimonial-result">[Resultado concreto: ej. "+40% margen en 4 meses"]</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PENDIENTE: Testimonio real 2 -->
+        <div class="testimonial-card">
+          <p class="testimonial-text">"Pensaba que mi problema era captar más pacientes. Álex me hizo ver que el problema era que no sabía vender lo que ya tenía. Cambié mi pricing, estructuré mi oferta y en dos meses dupliqué mi ticket medio."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">[M]</div>
+            <div>
+              <div class="testimonial-name">[Nombre del alumno/a]</div>
+              <div class="testimonial-role">[Ciudad] · Fisioterapeuta autónomo/a</div>
+              <span class="testimonial-result">[Resultado concreto: ej. "x2 ticket medio"]</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PENDIENTE: Testimonio real 3 -->
+        <div class="testimonial-card">
+          <p class="testimonial-text">"Entré en FisioReferentes sin saber nada de gestión. Solo sabía tratar. Hoy tengo un sistema, un dashboard y por primera vez me he cogido vacaciones sin que la clínica se pare."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">[A]</div>
+            <div>
+              <div class="testimonial-name">[Nombre del alumno/a]</div>
+              <div class="testimonial-role">[Ciudad] · Clínica de [X] fisios</div>
+              <span class="testimonial-result">[Resultado concreto: ej. "Primeras vacaciones en 5 años"]</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- Nota interna: esta sección está oculta en producción -->
+      <div class="testimonials-pending" style="display:block;">
+        ⚠️ PENDIENTE: Sustituir los 3 testimonios placeholder con testimonios reales. Necesitamos: nombre, foto, ciudad, tipo de clínica, y resultado concreto con cifra. Idealmente de alumnos del máster que encajen con el perfil ACTIVA (0-100K).
+      </div>
+    </div>
+  </section>
+
+  <!-- BECA SECTION -->
+  <section class="beca" id="beca">
+    <div class="beca-inner">
+      <span class="beca-badge">Inversión en tu futuro</span>
+      <h2>Becas ACTIVA: <span class="gold">1.000€ de ayuda directa</span></h2>
+      <p>FisioReferentes invierte 25.000€ en becas para la primera cohorte de ACTIVA. Si estás en el momento de construir los cimientos de tu clínica, esta beca es para ti.</p>
+      <p>No es un descuento. Es una inversión que hacemos en los fisioterapeutas que demuestran compromiso real con su negocio.</p>
+      <div class="beca-stats">
+        <div class="beca-stat">
+          <div class="num">1.000€</div>
+          <div class="desc">Valor de cada beca</div>
+        </div>
+        <div class="beca-stat">
+          <div class="num">25</div>
+          <div class="desc">Becas disponibles</div>
+        </div>
+        <div class="beca-stat">
+          <div class="num">25.000€</div>
+          <div class="desc">Inversión total de FisioReferentes</div>
+        </div>
+      </div>
+      <a href="https://form.typeform.com/to/Eeb7Hvur" class="cta-btn" target="_blank" rel="noopener">Solicitar mi beca de 1.000€</a>
+      <p class="beca-note">Solicitud en 2 minutos. Plazas limitadas por cohorte. Una vez cubiertas las 25 becas, se cierran las solicitudes.</p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="howitworks">
+    <div class="container-wide">
+      <h2 class="section-title">Cómo funciona</h2>
+      <p class="section-sub">Un proceso simple y claro. Sin complicaciones.</p>
+      <div class="steps-row">
+        <div class="step-card">
+          <span class="step-num">1</span>
+          <h3>Solicita tu beca</h3>
+          <p>Rellena el formulario en 2 minutos. El equipo revisa tu perfil y te confirma si encajas en la cohorte.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">2</span>
+          <h3>Pasa por el programa</h3>
+          <p>4 meses de playbooks, mentorías cada 15 días y grupo de WhatsApp. Implementas cada semana con acompañamiento directo.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">3</span>
+          <h3>Sal con tu clínica funcionando</h3>
+          <p>Terminas con propuesta de valor clara, captación activa, pricing con margen y un plan de acción para los próximos 90 días.</p>
         </div>
       </div>
     </div>
@@ -663,10 +718,10 @@
           <h3><span>✅</span> Sí, si...</h3>
           <ul>
             <li><span class="mark">→</span> Estás montando tu clínica o la has abierto recientemente</li>
-            <li><span class="mark">→</span> Facturas entre 0 y 100K y sientes que no tienes rumbo empresarial</li>
+            <li><span class="mark">→</span> Facturas entre 0 y 100K y no tienes claro si estás construyendo un negocio o una trampa</li>
+            <li><span class="mark">→</span> Trabajas solo o con 1-2 fisios y sientes que no puedes crecer más allá de tu esfuerzo personal</li>
             <li><span class="mark">→</span> Sabes que eres buen fisio pero te falta estructura de negocio</li>
             <li><span class="mark">→</span> Estás dispuesto a dedicar 2-3 horas semanales a trabajar EN tu clínica, no solo dentro de ella</li>
-            <li><span class="mark">→</span> Quieres un sistema, no otro curso de teoría</li>
           </ul>
         </div>
         <div class="forwho-col no">
@@ -683,52 +738,59 @@
     </div>
   </section>
 
-  <!-- INCLUDES -->
+  <!-- INCLUDES — EXPANDED GRID -->
   <section class="includes">
-    <div class="container">
+    <div class="container-wide">
       <h2 class="section-title">Qué incluye el programa</h2>
-      <div class="includes-list">
-        <div class="include-item">
-          <div class="include-icon">📋</div>
-          <div>
-            <h3>Playbooks accionables</h3>
-            <p>Guías paso a paso para cada fase. No teoría — ejecución directa con plantillas listas para usar.</p>
-          </div>
+      <p class="section-sub">Todo lo que necesitas para construir los cimientos de una clínica rentable. Nada más. Nada menos.</p>
+      <div class="includes-grid">
+        <div class="include-card">
+          <div class="include-card-icon">📋</div>
+          <h3>Playbooks accionables</h3>
+          <p>Guías paso a paso para cada fase del programa. No teoría — ejecución directa con plantillas listas para usar que puedes aplicar el mismo día.</p>
+          <div class="detail">1 playbook por módulo · Plantillas descargables</div>
         </div>
-        <div class="include-item">
-          <div class="include-icon">🎯</div>
-          <div>
-            <h3>Checkpoints de revisión</h3>
-            <p>Puntos de control periódicos para asegurar que avanzas en la dirección correcta y ajustar lo que haga falta.</p>
-          </div>
+        <div class="include-card">
+          <div class="include-card-icon">💬</div>
+          <h3>Mentoría cada 15 días</h3>
+          <p>2 horas de acompañamiento directo con profesionales que han construido lo que tú quieres construir. Preguntas en directo, feedback personalizado.</p>
+          <div class="detail">Cada 2 semanas · 2 horas por sesión · En directo</div>
         </div>
-        <div class="include-item">
-          <div class="include-icon">💬</div>
-          <div>
-            <h3>Mentoría directa</h3>
-            <p>Acceso a sesiones de mentoría con profesionales que han construido lo que tú quieres construir.</p>
-          </div>
+        <div class="include-card">
+          <div class="include-card-icon">🎯</div>
+          <h3>Checkpoints de revisión</h3>
+          <p>Puntos de control periódicos para asegurar que avanzas en la dirección correcta. Si te desvías, lo detectamos y ajustamos juntos.</p>
+          <div class="detail">Al final de cada módulo</div>
         </div>
-        <div class="include-item">
-          <div class="include-icon">📊</div>
-          <div>
-            <h3>Dashboard y plantillas operativas</h3>
-            <p>Scripts de conversión, guías de pricing, plantillas de captación y un dashboard básico para medir lo que importa.</p>
-          </div>
+        <div class="include-card">
+          <div class="include-card-icon">📊</div>
+          <h3>Dashboard y plantillas operativas</h3>
+          <p>Scripts de conversión, guías de pricing, plantillas de captación y un dashboard básico para medir lo que importa desde el primer mes.</p>
+          <div class="detail">Plantillas listas · Dashboard configurable</div>
         </div>
-        <div class="include-item">
-          <div class="include-icon">👥</div>
-          <div>
-            <h3>Comunidad de fisios en tu mismo punto</h3>
-            <p>Un grupo reducido de propietarios en fase similar. Sin ruido. Con contexto compartido.</p>
-          </div>
+        <div class="include-card">
+          <div class="include-card-icon">📱</div>
+          <h3>Grupo de WhatsApp privado</h3>
+          <p>Acceso directo al equipo y a tu cohorte. Dudas rápidas, feedback inmediato, sin esperar a la próxima sesión de mentoría.</p>
+          <div class="detail">Respuesta en menos de 24h</div>
         </div>
-        <div class="include-item">
-          <div class="include-icon">🎓</div>
-          <div>
-            <h3>Evento presencial + graduación</h3>
-            <p>Un encuentro real para consolidar lo aprendido, conocer a tu cohorte y salir con un plan de acción claro.</p>
-          </div>
+        <div class="include-card">
+          <div class="include-card-icon">👥</div>
+          <h3>Comunidad de fisios en tu mismo punto</h3>
+          <p>Un grupo reducido de propietarios en fase similar. Sin ruido. Con contexto compartido y la motivación de avanzar juntos.</p>
+          <div class="detail">Cohorte reducida · Máx. 25 personas</div>
+        </div>
+        <div class="include-card">
+          <div class="include-card-icon">🎓</div>
+          <h3>Evento presencial + graduación</h3>
+          <p>Un encuentro real para consolidar lo aprendido, conocer a tu cohorte cara a cara y salir con un plan de acción claro para lo que viene.</p>
+          <div class="detail">1 día completo · Presencial</div>
+        </div>
+        <div class="include-card">
+          <div class="include-card-icon">🗺️</div>
+          <h3>Plan de acción a 90 días</h3>
+          <p>Al terminar el programa, no te quedas en blanco. Te llevas un roadmap personalizado con las prioridades exactas para los próximos 3 meses.</p>
+          <div class="detail">Personalizado · Con métricas de seguimiento</div>
         </div>
       </div>
     </div>
@@ -743,15 +805,16 @@
         <span class="eco-arrow">→</span>
         <div class="eco-step inactive">OPTIMIZA</div>
         <span class="eco-arrow">→</span>
-        <div class="eco-step inactive">ESCALA</div>
+        <div class="eco-step inactive">MÁSTER</div>
       </div>
-      <p class="eco-note">ACTIVA es el primer paso. Los cimientos sobre los que se construye todo lo demás.</p>
+      <p class="eco-note">ACTIVA es el primer paso. Solo los que dominan los fundamentos pasan a Optimiza. Los cimientos sobre los que se construye todo lo demás.</p>
     </div>
   </section>
 
   <!-- ALEX SECTION -->
   <section class="alex">
     <div class="alex-inner">
+      <!-- PENDIENTE: Reemplazar las iniciales con foto real de Álex -->
       <div class="alex-avatar">AV</div>
       <h2>Álex Vallés</h2>
       <p class="role">Fisioterapeuta, empresario y fundador de FisioReferentes</p>
@@ -774,38 +837,6 @@
     </div>
   </section>
 
-  <!-- MASTERCLASS CTA -->
-  <section class="mc-cta" id="masterclass">
-    <div class="mc-cta-inner">
-      <span class="mc-badge">Masterclass Gratuita</span>
-      <h2>Los 3 errores que están frenando tu clínica (y cómo evitarlos)</h2>
-      <p>Una sesión en directo donde te enseño el sistema que me habría ahorrado años de errores y miles de euros. Sin humo. Sin teoría vacía. Solo lo que funciona.</p>
-      <div class="mc-details">
-        <div class="mc-detail">
-          <div class="label">Fecha</div>
-          <div class="value">[POR CONFIRMAR]</div>
-        </div>
-        <div class="mc-detail">
-          <div class="label">Hora</div>
-          <div class="value">[POR CONFIRMAR]</div>
-        </div>
-        <div class="mc-detail">
-          <div class="label">Duración</div>
-          <div class="value">~60 min</div>
-        </div>
-        <div class="mc-detail">
-          <div class="label">Formato</div>
-          <div class="value">Online en directo</div>
-        </div>
-      </div>
-      <form class="mc-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='¡Plaza reservada!'; this.querySelector('button').style.background='#22C55E'; this.querySelector('input').disabled=true;">
-        <input type="email" placeholder="Tu email profesional" required>
-        <button type="submit">Reservar plaza</button>
-      </form>
-      <p class="mc-micro">Plazas limitadas. Gratuito y sin compromiso.</p>
-    </div>
-  </section>
-
   <!-- FAQ -->
   <section class="faq">
     <div class="container">
@@ -821,19 +852,31 @@
         </div>
         <div class="faq-item">
           <div class="faq-q">¿Es diferente al máster "De Fisio a Empresario"?</div>
-          <div class="faq-a">Sí. El máster está diseñado para clínicas que ya facturan más y necesitan escalar. ACTIVA es el paso previo: construir las bases para que tu clínica sea rentable y funcional desde el inicio. Es la puerta de entrada al ecosistema FisioReferentes.</div>
+          <div class="faq-a">Sí. El máster está diseñado para clínicas que ya facturan más y necesitan escalar. ACTIVA es el paso previo: construir las bases para que tu clínica sea rentable y funcional desde el inicio. Solo los que dominan los fundamentos de ACTIVA pasan a Optimiza y luego al Máster. Es la puerta de entrada al ecosistema FisioReferentes.</div>
         </div>
         <div class="faq-item">
           <div class="faq-q">¿Cuánto cuesta el programa?</div>
-          <div class="faq-a">Toda la información sobre inversión, formas de pago y la beca disponible se comparte en la masterclass gratuita. Regístrate para conocer todos los detalles.</div>
+          <div class="faq-a">El programa tiene un precio early bird especial para la primera cohorte. Además, hay 25 becas de 1.000€ disponibles para fisioterapeutas que demuestren compromiso real. Solicita tu beca para conocer todos los detalles de inversión y formas de pago.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">¿Cómo funciona la beca de 1.000€?</div>
+          <div class="faq-a">FisioReferentes invierte 25.000€ en 25 becas de 1.000€ cada una para la primera cohorte. Rellenas la solicitud (2 minutos), el equipo la revisa, y si encajas en el perfil, la beca se aplica directamente a tu matrícula. No es un descuento — es una inversión en fisioterapeutas comprometidos.</div>
         </div>
         <div class="faq-item">
           <div class="faq-q">¿Hay plazas limitadas?</div>
-          <div class="faq-a">Sí. ACTIVA funciona por cohortes reducidas para garantizar calidad en el acompañamiento. Cada cohorte tiene un número limitado de plazas.</div>
+          <div class="faq-a">Sí. ACTIVA funciona por cohortes reducidas (máximo 25 personas) para garantizar calidad en el acompañamiento. Y las becas son aún más limitadas: solo 25 por cohorte. En la próxima edición no podemos garantizar las mismas condiciones.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">¿Cada cuánto son las mentorías?</div>
+          <div class="faq-a">Cada 15 días. Sesiones de 2 horas con acompañamiento directo. Además, tienes acceso al grupo de WhatsApp para dudas rápidas entre sesiones.</div>
         </div>
         <div class="faq-item">
           <div class="faq-q">Yo no sé nada de negocio, ¿puedo seguir el programa?</div>
           <div class="faq-a">ACTIVA está creado exactamente para ti. No necesitas experiencia empresarial previa. Los playbooks te guían paso a paso, y los checkpoints aseguran que no te pierdas. El 100% de los alumnos arrancaron en tu misma situación.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">¿Qué pasa si no me funciona?</div>
+          <div class="faq-a">La metodología de FisioReferentes ha sido validada con más de 100 fisioterapeutas. No prometemos milagros — prometemos un sistema probado. Si sigues los playbooks, implementas los planes de acción y asistes a las mentorías, los resultados llegan. Y si en algún momento sientes que no es para ti, hablamos. Aquí no atamos a nadie.</div>
         </div>
       </div>
     </div>
@@ -842,9 +885,9 @@
   <!-- FINAL CTA -->
   <section class="final-cta">
     <div class="container">
-      <h2>Tu clínica no necesita más formación técnica.<br>Necesita <span class="gold">estructura.</span></h2>
-      <p>Apúntate a la masterclass gratuita y descubre el sistema que te habría ahorrado años de errores si alguien te lo hubiera enseñado en la universidad.</p>
-      <a href="#masterclass">Quiero reservar mi plaza</a>
+      <h2>Tu clínica no necesita más pacientes.<br>Necesita más <span class="gold">estructura.</span></h2>
+      <p>Solicita tu beca de 1.000€ y empieza a construir los cimientos de una clínica que funcione sin que tú tengas que estar en todo.</p>
+      <a href="https://form.typeform.com/to/Eeb7Hvur" class="cta-btn" target="_blank" rel="noopener">Solicitar mi beca de 1.000€</a>
     </div>
   </section>
 
@@ -853,7 +896,14 @@
     <p>&copy; 2026 FisioReferentes. Todos los derechos reservados. · <a href="#">Política de privacidad</a> · <a href="#">Aviso legal</a></p>
   </footer>
 
+  <!-- WHATSAPP FLOAT -->
+  <!-- PENDIENTE: Reemplazar el número de WhatsApp con el real de FisioReferentes -->
+  <a href="https://wa.me/34XXXXXXXXX" class="wa-float" target="_blank" rel="noopener" title="¿Tienes dudas? Escríbenos por WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
   <script>
+    // FAQ accordion
     document.querySelectorAll('.faq-q').forEach(q => {
       q.addEventListener('click', () => {
         const item = q.parentElement;
@@ -862,6 +912,7 @@
         if (!wasOpen) item.classList.add('open');
       });
     });
+    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', e => {
         e.preventDefault();
