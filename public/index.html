@@ -349,8 +349,12 @@
       display: inline-flex; align-items: center; justify-content: center;
       margin-bottom: 20px;
     }
-    .step-card h3 { font-size: 17px; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
-    .step-card p { font-size: 14px; color: var(--text-light); line-height: 1.6; }
+    .step-card h3 { font-size: 17px; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
+    .step-card .step-highlight { color: #2E9E5A; font-weight: 700; }
+    .step-card p { font-size: 14px; color: var(--text-light); line-height: 1.6; margin-bottom: 0; }
+    .step-bullets { list-style: none; padding: 0; margin: 10px 0 0; text-align: left; }
+    .step-bullets li { font-size: 13px; color: var(--text-light); line-height: 1.5; padding: 3px 0; padding-left: 16px; position: relative; }
+    .step-bullets li::before { content: "✓"; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
     .step-connector {
       display: none; /* visible via grid on desktop */
     }
@@ -862,18 +866,32 @@
       <div class="steps-row">
         <div class="step-card">
           <span class="step-num">1</span>
-          <h3>Solicita tu beca</h3>
-          <p>Rellena el formulario en 2 minutos. El equipo revisa tu perfil y te confirma si encajas en la cohorte.</p>
+          <h3>Solicita tu beca <span class="step-highlight">sin compromiso</span></h3>
+          <ul class="step-bullets">
+            <li>Formulario de 2 minutos</li>
+            <li>El equipo revisa tu perfil</li>
+            <li>Te confirmamos si encajas en la cohorte</li>
+          </ul>
         </div>
         <div class="step-card">
           <span class="step-num">2</span>
           <h3>Pasa por el programa</h3>
-          <p>4 meses de playbooks, mentorías cada 15 días y grupo de WhatsApp. Implementas cada semana con acompañamiento directo.</p>
+          <ul class="step-bullets">
+            <li>4 meses de playbooks accionables</li>
+            <li>Mentorías cada 15 días</li>
+            <li>Grupo de WhatsApp con seguimiento</li>
+            <li>Implementas cada semana con acompañamiento</li>
+          </ul>
         </div>
         <div class="step-card">
           <span class="step-num">3</span>
           <h3>Sal con tu clínica funcionando</h3>
-          <p>Terminas con propuesta de valor clara, captación activa, pricing con margen y un plan de acción para los próximos 90 días.</p>
+          <ul class="step-bullets">
+            <li>Propuesta de valor clara y diferenciada</li>
+            <li>Captación activa de pacientes</li>
+            <li>Pricing con margen real</li>
+            <li>Plan de acción para los próximos 90 días</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -975,7 +993,7 @@
         <span class="eco-arrow">→</span>
         <div class="eco-step inactive">OPTIMIZA</div>
         <span class="eco-arrow">→</span>
-        <div class="eco-step inactive">MÁSTER</div>
+        <div class="eco-step inactive">ESCALA</div>
       </div>
       <p class="eco-note">ACTIVA es el primer paso. Solo los que dominan los fundamentos pasan a Optimiza. Los cimientos sobre los que se construye todo lo demás.</p>
     </div>
@@ -984,8 +1002,7 @@
   <!-- ALEX SECTION -->
   <section class="alex">
     <div class="alex-inner">
-      <!-- PENDIENTE: Reemplazar las iniciales con foto real de Álex -->
-      <div class="alex-avatar">AV</div>
+      <div class="alex-avatar"><img src="alex-web.png" alt="Álex Vallés"></div>
       <h2>Álex Vallés</h2>
       <p class="role">Fisioterapeuta, empresario y fundador de FisioReferentes</p>
       <p>Fundador de FisioZaragoza y Clínica Podium — centro de referencia en Aragón. Autor de <em>La Fórmula del Éxito en Fisioterapia</em>. Creador de la metodología EPIC y el sistema que ha ayudado a cientos de fisioterapeutas a transformar sus clínicas en negocios rentables.</p>
