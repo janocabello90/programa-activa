@@ -385,26 +385,52 @@
     .forwho-col li:last-child { border-bottom: none; }
     .forwho-col li .mark { flex-shrink: 0; font-size: 14px; margin-top: 2px; color: var(--text-light); }
 
-    /* --- INCLUDES EXPANDED --- */
+    /* --- INCLUDES — HORIZONTAL BLOCKS --- */
     .includes { padding: 80px 24px; background: var(--bg); }
-    .includes-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px; max-width: 960px; margin: 0 auto;
+    .includes-list { max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; gap: 48px; }
+    .include-block {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
+      align-items: center; background: var(--bg-soft);
+      border: 1px solid var(--border); border-radius: 16px;
+      padding: 40px; overflow: hidden;
     }
-    .include-card {
-      background: var(--bg-soft); border: 1px solid var(--border);
-      border-radius: var(--radius); padding: 28px;
+    .include-block.reverse { direction: rtl; }
+    .include-block.reverse > * { direction: ltr; }
+    .include-block-text {}
+    .include-block-icon {
+      font-size: 28px; margin-bottom: 12px;
     }
-    .include-card-icon {
-      width: 48px; height: 48px; background: var(--navy); color: var(--gold);
-      border-radius: 10px; display: flex; align-items: center; justify-content: center;
-      font-size: 22px; margin-bottom: 16px;
+    .include-block-text h3 {
+      font-size: 20px; font-weight: 800; color: var(--dark);
+      margin-bottom: 10px; letter-spacing: -0.01em;
     }
-    .include-card h3 { font-size: 16px; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
-    .include-card p { font-size: 14px; color: var(--text-light); line-height: 1.65; }
-    .include-card .detail {
+    .include-block-text p {
+      font-size: 15px; color: var(--text-light); line-height: 1.7; margin-bottom: 12px;
+    }
+    .include-block-text .detail {
       font-size: 12px; color: var(--gold); font-weight: 600;
-      margin-top: 10px; text-transform: uppercase; letter-spacing: 0.05em;
+      text-transform: uppercase; letter-spacing: 0.05em;
+    }
+    .include-block-mockup {
+      background: var(--navy-deep); border-radius: 12px;
+      aspect-ratio: 16 / 10; display: flex; align-items: center;
+      justify-content: center; overflow: hidden; position: relative;
+    }
+    .include-block-mockup img {
+      width: 100%; height: 100%; object-fit: cover; border-radius: 8px;
+    }
+    .mockup-placeholder {
+      color: rgba(255,255,255,0.2); font-size: 13px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      text-align: center; padding: 20px;
+    }
+    .mockup-placeholder span {
+      display: block; font-size: 40px; margin-bottom: 8px; opacity: 0.3;
+    }
+    @media (max-width: 768px) {
+      .include-block { grid-template-columns: 1fr; padding: 28px; gap: 24px; }
+      .include-block.reverse { direction: ltr; }
+      .include-block-mockup { aspect-ratio: 16 / 9; }
     }
 
     /* --- ECOSYSTEM --- */
@@ -538,8 +564,8 @@
       <div class="hero-logo">
         <img src="logo-activa.png" alt="ACTIVA by FisioReferentes" onerror="this.parentElement.innerHTML='<div class=hero-logo-placeholder><div class=logo-activa>ACTIVA</div><div class=logo-sub>by FISIOREFERENTES <span class=logo-star>★</span></div></div>'">
       </div>
-      <h1>De autónomo atrapado a dueño de una clínica <span class="gold">funcional y rentable.</span></h1>
-      <p class="hero-sub">Tu problema no eres tú — nadie te enseñó esto. ACTIVA es el sistema de 4 meses que te da estructura, dirección y rentabilidad real. Para fisioterapeutas que facturan de 0 a 100K y quieren dejar de improvisar con su negocio.</p>
+      <h1>Deja de ser el cuello de botella de tu <span class="gold">propia clínica.</span></h1>
+      <p class="hero-sub">Tu clínica funciona… pero solo si tú estás. ACTIVA es el sistema de 4 meses que instala estructura, dirección y rentabilidad en tu negocio. Para fisioterapeutas que facturan de 0 a 100K y quieren dejar de resolver todo solos.</p>
       <a href="https://form.typeform.com/to/Eeb7Hvur" class="cta-btn" target="_blank" rel="noopener">Solicita tu beca de 1.000€</a>
       <p class="hero-micro">25 becas disponibles. Solicitud en 2 minutos.</p>
     </div>
@@ -628,34 +654,34 @@
       <p class="section-sub">No eres mal fisio. El problema es que nadie te enseñó a ser empresario.</p>
       <div class="pain-grid">
         <div class="pain-card">
-          <span class="icon">💸</span>
-          <h3>Trabajas mucho, pero el margen no aparece</h3>
-          <p>Facturas algo, pero entre alquiler, seguro, material y tu tiempo... lo que queda al final del mes es deprimente. Y no sabes ni por dónde ajustar.</p>
-        </div>
-        <div class="pain-card">
-          <span class="icon">📉</span>
-          <h3>No sabes cuánto ganas de verdad</h3>
-          <p>No tienes claro tu margen real. Confundes facturación con beneficio. Y cuando miras la cuenta a final de mes, los números no cuadran con el esfuerzo que metes.</p>
-        </div>
-        <div class="pain-card">
-          <span class="icon">🎯</span>
-          <h3>No sabes vender tus tratamientos</h3>
-          <p>Te da vergüenza hablar de dinero con los pacientes. No sabes cómo presentar un plan de tratamiento sin sentir que estás "vendiendo". Y acabas regalando sesiones.</p>
-        </div>
-        <div class="pain-card">
           <span class="icon">🔄</span>
-          <h3>Captación impredecible</h3>
-          <p>Unos meses bien, otros vacíos. No tienes un sistema que genere pacientes de forma constante. Vives de la recomendación y el boca a boca... y eso no escala.</p>
+          <h3>Todo pasa por ti. Siempre.</h3>
+          <p>Si tú paras, la clínica para. No hay sistemas, no hay procesos. Cada decisión, cada problema, cada paciente pasa por tu mesa. Y eso no escala.</p>
         </div>
         <div class="pain-card">
-          <span class="icon">🪤</span>
-          <h3>Estás construyendo una trampa, no un negocio</h3>
-          <p>Si tú paras, todo para. No tienes estructura, no tienes procesos, no tienes sistema. Has montado un autoempleo disfrazado de empresa.</p>
+          <span class="icon">⚡</span>
+          <h3>Sabes lo que deberías hacer, pero no lo haces</h3>
+          <p>Has hecho formaciones, has leído libros, tienes ideas… pero no consigues ejecutar. El día a día te come y las mejoras se quedan en la lista de "algún día".</p>
         </div>
         <div class="pain-card">
-          <span class="icon">😰</span>
-          <h3>No puedes crecer más allá de tu esfuerzo personal</h3>
-          <p>Eres el fisio, el recepcionista, el de redes, el contable y el de las compras. Y la sensación de caos te acompaña cada domingo por la noche.</p>
+          <span class="icon">🧭</span>
+          <h3>No sabes si vas bien o directo al muro</h3>
+          <p>No tienes un plan. No tienes KPIs. No sabes si las decisiones que tomas son las correctas. Avanzas a ciegas y eso te genera una ansiedad constante.</p>
+        </div>
+        <div class="pain-card">
+          <span class="icon">👥</span>
+          <h3>Contratar te da más miedo que no hacerlo</h3>
+          <p>Ya lo intentaste y salió mal. O no llenan agenda, o se van, o no trabajan como tú. Y ahora prefieres hacerlo todo solo antes que volver a pasar por eso.</p>
+        </div>
+        <div class="pain-card">
+          <span class="icon">💸</span>
+          <h3>Facturas pero no queda</h3>
+          <p>Trabajas más que nunca pero cuando miras la cuenta al final del mes, los números no cuadran con el esfuerzo. No sabes realmente cuánto ganas.</p>
+        </div>
+        <div class="pain-card">
+          <span class="icon">🏠</span>
+          <h3>Tu familia te espera, pero tu clínica también</h3>
+          <p>12 horas al día. Domingos pensando en la agenda del lunes. Culpa por no estar con tus hijos. La clínica se come tu vida y cada vez queda menos de ti.</p>
         </div>
       </div>
     </div>
@@ -678,6 +704,10 @@
       </div>
       <p>Tardé años en entenderlo. Años de errores caros, de noches sin dormir, de sentir que cuanto más trabajaba, más atrapado estaba.</p>
       <p>ACTIVA existe para que tú no tardes años. Para que desde el primer día tengas lo que yo no tuve: <strong>un sistema, una dirección y una estructura que funcione.</strong></p>
+      <div class="quote" style="margin-top: 40px; border-left-color: #C2A24D;">
+        "La dependencia que tengo tan tóxica con la clínica, todo lo que pasa pasa por mí o lo soluciono yo. 24/7."
+        <span style="display: block; margin-top: 8px; font-size: 14px; font-style: normal; color: #64748B;">— Aplicante real, Programa ACTIVA</span>
+      </div>
     </div>
   </section>
 
@@ -919,10 +949,11 @@
         <div class="forwho-col yes">
           <h3><span>✅</span> Sí, si...</h3>
           <ul>
-            <li><span class="mark">→</span> Estás montando tu clínica o la has abierto recientemente</li>
+            <li><span class="mark">→</span> Tienes una clínica en marcha (o estás a punto de abrirla) y sientes que todo depende de ti</li>
             <li><span class="mark">→</span> Facturas entre 0 y 100K y no tienes claro si estás construyendo un negocio o una trampa</li>
-            <li><span class="mark">→</span> Trabajas solo o con 1-2 fisios y sientes que no puedes crecer más allá de tu esfuerzo personal</li>
-            <li><span class="mark">→</span> Sabes que eres buen fisio pero te falta estructura de negocio</li>
+            <li><span class="mark">→</span> Tienes equipo (o quieres tenerlo) pero no consigues que la clínica funcione sin ti dentro</li>
+            <li><span class="mark">→</span> Sabes que eres buen fisio pero te falta estructura, dirección y sistemas de negocio</li>
+            <li><span class="mark">→</span> Has probado otras formaciones de negocio y no te funcionaron — o te faltó la parte de implementación</li>
             <li><span class="mark">→</span> Estás dispuesto a dedicar 2-3 horas semanales a trabajar EN tu clínica, no solo dentro de ella</li>
           </ul>
         </div>
@@ -940,60 +971,125 @@
     </div>
   </section>
 
-  <!-- INCLUDES — EXPANDED GRID -->
+  <!-- INCLUDES — HORIZONTAL BLOCKS WITH MOCKUPS -->
   <section class="includes">
     <div class="container-wide">
       <h2 class="section-title">Qué incluye el programa</h2>
       <p class="section-sub">Todo lo que necesitas para construir los cimientos de una clínica rentable. Nada más. Nada menos.</p>
-      <div class="includes-grid">
-        <div class="include-card">
-          <div class="include-card-icon">📋</div>
-          <h3>Playbooks accionables</h3>
-          <p>Guías paso a paso para cada fase del programa. No teoría — ejecución directa con plantillas listas para usar que puedes aplicar el mismo día.</p>
-          <div class="detail">1 playbook por módulo · Plantillas descargables</div>
+      <div class="includes-list">
+
+        <!-- 1. Playbooks -->
+        <div class="include-block">
+          <div class="include-block-text">
+            <div class="include-block-icon">📋</div>
+            <h3>Playbooks accionables</h3>
+            <p>Guías paso a paso para cada fase del programa. No teoría — ejecución directa con plantillas listas para usar que puedes aplicar el mismo día.</p>
+            <div class="detail">1 playbook por módulo · Plantillas descargables</div>
+          </div>
+          <div class="include-block-mockup">
+            <!-- MOCKUP: Sube mockup-playbooks.png a /public/ -->
+            <div class="mockup-placeholder"><span>📋</span>mockup-playbooks.png</div>
+          </div>
         </div>
-        <div class="include-card">
-          <div class="include-card-icon">💬</div>
-          <h3>Mentoría cada 15 días</h3>
-          <p>2 horas de acompañamiento directo con profesionales que han construido lo que tú quieres construir. Preguntas en directo, feedback personalizado.</p>
-          <div class="detail">Cada 2 semanas · 2 horas por sesión · En directo</div>
+
+        <!-- 2. Mentoría -->
+        <div class="include-block reverse">
+          <div class="include-block-text">
+            <div class="include-block-icon">💬</div>
+            <h3>Mentoría cada 15 días</h3>
+            <p>2 horas de acompañamiento directo con profesionales que han construido lo que tú quieres construir. Preguntas en directo, feedback personalizado.</p>
+            <div class="detail">Cada 2 semanas · 2 horas por sesión · En directo</div>
+          </div>
+          <div class="include-block-mockup">
+            <!-- MOCKUP: Sube mockup-mentoria.png a /public/ -->
+            <div class="mockup-placeholder"><span>💬</span>mockup-mentoria.png</div>
+          </div>
         </div>
-        <div class="include-card">
-          <div class="include-card-icon">🎯</div>
-          <h3>Checkpoints de revisión</h3>
-          <p>Puntos de control periódicos para asegurar que avanzas en la dirección correcta. Si te desvías, lo detectamos y ajustamos juntos.</p>
-          <div class="detail">Al final de cada módulo</div>
+
+        <!-- 3. Checkpoints -->
+        <div class="include-block">
+          <div class="include-block-text">
+            <div class="include-block-icon">🎯</div>
+            <h3>Checkpoints de revisión</h3>
+            <p>Puntos de control periódicos para asegurar que avanzas en la dirección correcta. Si te desvías, lo detectamos y ajustamos juntos.</p>
+            <div class="detail">Al final de cada módulo</div>
+          </div>
+          <div class="include-block-mockup">
+            <!-- MOCKUP: Sube mockup-checkpoints.png a /public/ -->
+            <div class="mockup-placeholder"><span>🎯</span>mockup-checkpoints.png</div>
+          </div>
         </div>
-        <div class="include-card">
-          <div class="include-card-icon">📊</div>
-          <h3>Dashboard y plantillas operativas</h3>
-          <p>Scripts de conversión, guías de pricing, plantillas de captación y un dashboard básico para medir lo que importa desde el primer mes.</p>
-          <div class="detail">Plantillas listas · Dashboard configurable</div>
+
+        <!-- 4. Dashboard -->
+        <div class="include-block reverse">
+          <div class="include-block-text">
+            <div class="include-block-icon">📊</div>
+            <h3>Dashboard y plantillas operativas</h3>
+            <p>Scripts de conversión, guías de pricing, plantillas de captación y un dashboard básico para medir lo que importa desde el primer mes.</p>
+            <div class="detail">Plantillas listas · Dashboard configurable</div>
+          </div>
+          <div class="include-block-mockup">
+            <!-- MOCKUP: Sube mockup-dashboard.png a /public/ -->
+            <div class="mockup-placeholder"><span>📊</span>mockup-dashboard.png</div>
+          </div>
         </div>
-        <div class="include-card">
-          <div class="include-card-icon">📱</div>
-          <h3>Grupo de WhatsApp privado</h3>
-          <p>Acceso directo al equipo y a tu cohorte. Dudas rápidas, feedback inmediato, sin esperar a la próxima sesión de mentoría.</p>
-          <div class="detail">Respuesta en menos de 24h</div>
+
+        <!-- 5. WhatsApp -->
+        <div class="include-block">
+          <div class="include-block-text">
+            <div class="include-block-icon">📱</div>
+            <h3>Grupo de WhatsApp privado</h3>
+            <p>Acceso directo al equipo y a tu cohorte. Dudas rápidas, feedback inmediato, sin esperar a la próxima sesión de mentoría.</p>
+            <div class="detail">Respuesta en menos de 24h</div>
+          </div>
+          <div class="include-block-mockup">
+            <!-- MOCKUP: Sube mockup-whatsapp.png a /public/ -->
+            <div class="mockup-placeholder"><span>📱</span>mockup-whatsapp.png</div>
+          </div>
         </div>
-        <div class="include-card">
-          <div class="include-card-icon">👥</div>
-          <h3>Comunidad de fisios en tu mismo punto</h3>
-          <p>Un grupo reducido de propietarios en fase similar. Sin ruido. Con contexto compartido y la motivación de avanzar juntos.</p>
-          <div class="detail">Cohorte reducida · Máx. 25 personas</div>
+
+        <!-- 6. Comunidad -->
+        <div class="include-block reverse">
+          <div class="include-block-text">
+            <div class="include-block-icon">👥</div>
+            <h3>Comunidad de fisios en tu mismo punto</h3>
+            <p>Un grupo reducido de propietarios en fase similar. Sin ruido. Con contexto compartido y la motivación de avanzar juntos.</p>
+            <div class="detail">Cohorte reducida · Máx. 25 personas</div>
+          </div>
+          <div class="include-block-mockup">
+            <!-- MOCKUP: Sube mockup-comunidad.png a /public/ -->
+            <div class="mockup-placeholder"><span>👥</span>mockup-comunidad.png</div>
+          </div>
         </div>
-        <div class="include-card">
-          <div class="include-card-icon">🎓</div>
-          <h3>Evento presencial + graduación</h3>
-          <p>Un encuentro real para consolidar lo aprendido, conocer a tu cohorte cara a cara y salir con un plan de acción claro para lo que viene.</p>
-          <div class="detail">1 día completo · Presencial</div>
+
+        <!-- 7. Evento presencial -->
+        <div class="include-block">
+          <div class="include-block-text">
+            <div class="include-block-icon">🎓</div>
+            <h3>Evento presencial + graduación</h3>
+            <p>Un encuentro real para consolidar lo aprendido, conocer a tu cohorte cara a cara y salir con un plan de acción claro para lo que viene.</p>
+            <div class="detail">1 día completo · Presencial</div>
+          </div>
+          <div class="include-block-mockup">
+            <!-- MOCKUP: Sube mockup-evento.png a /public/ -->
+            <div class="mockup-placeholder"><span>🎓</span>mockup-evento.png</div>
+          </div>
         </div>
-        <div class="include-card">
-          <div class="include-card-icon">🗺️</div>
-          <h3>Plan de acción a 90 días</h3>
-          <p>Al terminar el programa, no te quedas en blanco. Te llevas un roadmap personalizado con las prioridades exactas para los próximos 3 meses.</p>
-          <div class="detail">Personalizado · Con métricas de seguimiento</div>
+
+        <!-- 8. Plan 90 días -->
+        <div class="include-block reverse">
+          <div class="include-block-text">
+            <div class="include-block-icon">🗺️</div>
+            <h3>Plan de acción a 90 días</h3>
+            <p>Al terminar el programa, no te quedas en blanco. Te llevas un roadmap personalizado con las prioridades exactas para los próximos 3 meses.</p>
+            <div class="detail">Personalizado · Con métricas de seguimiento</div>
+          </div>
+          <div class="include-block-mockup">
+            <!-- MOCKUP: Sube mockup-plan90.png a /public/ -->
+            <div class="mockup-placeholder"><span>🗺️</span>mockup-plan90.png</div>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -1076,6 +1172,10 @@
           <div class="faq-a">ACTIVA está creado exactamente para ti. No necesitas experiencia empresarial previa. Los playbooks te guían paso a paso, y los checkpoints aseguran que no te pierdas. El 100% de los alumnos arrancaron en tu misma situación.</div>
         </div>
         <div class="faq-item">
+          <div class="faq-q">Ya he hecho otras mentorías de negocio y no me funcionaron. ¿En qué se diferencia ACTIVA?</div>
+          <div class="faq-a">Lo entendemos — muchos de los fisioterapeutas que aplican nos dicen exactamente eso. La diferencia es que ACTIVA no es formación, es implementación guiada. Cada 15 días revisamos contigo qué has hecho, qué ha funcionado y qué ajustar. No te damos un curso para que lo veas cuando puedas — te damos un sistema y te acompañamos mientras lo montas. Además, Álex y Jano son fisioterapeutas que han construido clínicas reales, no consultores que hablan desde la teoría.</div>
+        </div>
+        <div class="faq-item">
           <div class="faq-q">¿Qué pasa si no me funciona?</div>
           <div class="faq-a">La metodología de FisioReferentes ha sido validada con más de 200 fisioterapeutas dueños de negocio. No prometemos milagros — prometemos un sistema probado. Si sigues los playbooks, implementas los planes de acción y asistes a las mentorías, los resultados llegan. Y si en algún momento sientes que no es para ti, hablamos. Aquí no atamos a nadie.</div>
         </div>
@@ -1089,6 +1189,7 @@
       <h2>Tu clínica no necesita más pacientes.<br>Necesita más <span class="gold">estructura.</span></h2>
       <p>Solicita tu beca de 1.000€ y empieza a construir los cimientos de una clínica que funcione sin que tú tengas que estar en todo.</p>
       <a href="https://form.typeform.com/to/Eeb7Hvur" class="cta-btn" target="_blank" rel="noopener">Solicitar mi beca de 1.000€</a>
+      <p class="hero-micro" style="margin-top: 16px; opacity: 0.8;">El 90% de los seleccionados empiezan a implementar desde el primer mes.</p>
     </div>
   </section>
 
